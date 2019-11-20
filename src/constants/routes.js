@@ -1,0 +1,16 @@
+export const WELCOME = '/';
+export const DASHBOARD = '/dashboard';
+export const SIGN_UP = '/signup';
+export const SIGN_IN = '/signin';
+export const SIGN_OUT = '/signout';
+export const PURCHASE = '/purchase';
+export const HISTORY = '/history';
+export const ACCOUNT = '/account';
+export const ADMIN_REGISTER = '/admin/register';
+export const ADMIN_USER = '/admin/user';
+export const ADMIN_PRODUCT = '/admin/product';
+export const ADMIN_TRANSACTION = '/admin/transaction';
+export const PASSWORD_FORGET = '/pw-forget';
+export const PASSWORD_CHANGE = '/pw-change';
+export const OAUTH_REDIRECT = '/oauth2/redirect';
+export const POS = '/pos';

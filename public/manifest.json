@@ -1,0 +1,15 @@
+{
+  "short_name": "Petite Caisse",
+  "name": "Petite Caisse : Achetez facilement",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2e7d32",
+  "background_color": "#2e7d32"
+}
