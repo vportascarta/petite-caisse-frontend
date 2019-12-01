@@ -1,4 +1,5 @@
 export const WELCOME = '/';
+export const TOS = '/tos';
 export const DASHBOARD = '/dashboard';
 export const SIGN_UP = '/signup';
 export const SIGN_IN = '/signin';

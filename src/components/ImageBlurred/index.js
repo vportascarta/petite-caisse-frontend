@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     marginTop: '20px',
     marginBottom: '20px',
-    height: '300px',
+    height: '400px',
     width: '90vw'
   },
   imgBlur: {
@@ -36,7 +36,6 @@ const ImageRandom = (props) => {
     <div className={classes.root}>
         <div className={classes.imgBlur}/>
         <div className={classes.img}/>
-      {/*<img className={classes.img} alt='random' src='https://source.unsplash.com/1600x900/?nature,water'/>*/}
     </div>
   )
 };

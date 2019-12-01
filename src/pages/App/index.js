@@ -5,8 +5,8 @@ import {
     Switch
 } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
-import AppUser from "../AppUser";
-import AppPOS from "../AppPOS";
+import AppUser from "./AppUser";
+import AppPOS from "./AppPOS";
 
 const App = () => {
     return (

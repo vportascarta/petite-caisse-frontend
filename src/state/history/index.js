@@ -1,23 +1,23 @@
 import { useEffect, useState } from "react";
 import { findLastTransaction } from "../../utils/API";
 
-export const useTransactionHistory = size => {
+export const useTransactionHistory = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [getPage, setPage] = useState(0);
-  const [getSize, setSize] = useState(size);
-  const [getHistory, setHistory] = useState([]);
+  const [getSize, setSize] = useState(10);
+  const [getHistoryInfo, setHistoryInfo] = useState(null);
   const [hasError, setHasError] = useState(null);
 
   const fetchData = (page, size) => {
     setIsLoading(true);
     findLastTransaction(page, size)
       .then(result => {
-        setHistory(result);
+        setHistoryInfo(result);
         setHasError(null);
         setIsLoading(false);
       })
       .catch(reason => {
-        setHistory([]);
+        setHistoryInfo(null);
         setHasError(reason);
         setIsLoading(false);
       });
@@ -27,5 +27,5 @@ export const useTransactionHistory = size => {
     fetchData(getPage, getSize);
   }, [getPage, getSize]);
 
-  return [isLoading, getHistory, getPage, setPage, getSize, setSize, hasError];
+  return [isLoading, getHistoryInfo, setPage, setSize, hasError, fetchData];
 };
