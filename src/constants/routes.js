@@ -13,5 +13,4 @@ export const ADMIN_PRODUCT = '/admin/product';
 export const ADMIN_TRANSACTION = '/admin/transaction';
 export const PASSWORD_FORGET = '/pw-forget';
 export const PASSWORD_CHANGE = '/pw-change';
-export const OAUTH_REDIRECT = '/oauth2/redirect';
 export const POS = '/pos';

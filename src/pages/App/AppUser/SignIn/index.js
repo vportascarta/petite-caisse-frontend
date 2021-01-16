@@ -11,9 +11,7 @@ import {
 import { PasswordForgetLink } from "../PasswordForget";
 import { isMobile } from "react-device-detect";
 import {
-  ACCESS_TOKEN,
-  GITHUB_AUTH_URL,
-  GOOGLE_AUTH_URL
+  ACCESS_TOKEN
 } from "../../../../constants/API";
 import SessionContext from "../../../../contexts/Session";
 import { login } from "../../../../utils/API";
@@ -27,43 +25,6 @@ const SignInPage = () => {
         Connexion
       </Typography>
       <SignInForm />
-
-      <div style={{ height: 20 }} />
-
-      <Grid
-        container
-        direction="row"
-        justify="center"
-        alignItems="center"
-        spacing={2}
-      >
-        <Grid item md={6} sm={12} xs={12}>
-          <Button
-            variant="contained"
-            color="secondary"
-            fullWidth
-            href={GOOGLE_AUTH_URL}
-          >
-            <SvgIcon style={{ marginRight: 5 }}>
-              <path d={mdiGoogle} />
-            </SvgIcon>
-            Connexion avec Google
-          </Button>
-        </Grid>
-        <Grid item md={6} sm={12} xs={12}>
-          <Button
-            variant="contained"
-            color="secondary"
-            fullWidth
-            href={GITHUB_AUTH_URL}
-          >
-            <SvgIcon style={{ marginRight: 5 }}>
-              <path d={mdiGithubCircle} />
-            </SvgIcon>
-            Connexion avec Github
-          </Button>
-        </Grid>
-      </Grid>
 
       <div style={{ height: 20 }} />
 

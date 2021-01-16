@@ -20,7 +20,6 @@ import deepOrange from "@material-ui/core/colors/deepOrange";
 import green from "@material-ui/core/colors/green";
 import HistoryPage from "./History";
 import Navigation from "./Navigation";
-import OAuthRedirect from "./OAuthRedirect";
 import Page404 from "./404";
 import PasswordChangePage from "./PasswordChange";
 import PasswordForgetPage from "./PasswordForget";
@@ -100,11 +99,6 @@ const AppUser = () => {
               {!isLoading ? (
                 <div className={classes.content}>
                   <Switch>
-                    <Route
-                      exact
-                      path={ROUTES.OAUTH_REDIRECT}
-                      component={OAuthRedirect}
-                    />
                     <Route
                       exact
                       path={ROUTES.WELCOME}
@@ -191,8 +185,8 @@ const AppUser = () => {
                   </Switch>
                 </div>
               ) : (
-                <CircularProgress className={classes.loader} />
-              )}
+                  <CircularProgress className={classes.loader} />
+                )}
             </Router>
           </div>
         </AlertContext.Provider>
@@ -231,8 +225,8 @@ const ProtectedRoute = props => {
         shouldDisplay ? (
           <Component {...props} />
         ) : (
-          <Redirect to={ROUTES.WELCOME} />
-        )
+            <Redirect to={ROUTES.WELCOME} />
+          )
       }
     />
   );
